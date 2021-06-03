@@ -1,0 +1,40 @@
+{
+  "name": "exit_new_git",
+  "version": "1.0.0",
+  "description": "A JavaScript project",
+  "main": "./dist/index.js",
+  "scripts": {
+    "dev:watch": "node ./node_modules/parcel-bundler/bin/cli watch ./src/index.js --target node",
+    "dev:hot-reload": "node ./node_modules/nodemon/bin/nodemon --watch ./dist/ ./dist/index.js",
+    "start": "node ./node_modules/npm-run-all/bin/npm-run-all -p -r dev:watch dev:hot-reload",
+    "build": "node ./node_modules/parcel-bundler/bin/cli build ./src/index.js --target node --out-dir ./dist/",
+    "lint": "node ./node_modules/eslint/bin/eslint . --ext .js --fix",
+    "tsc": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@wdio/cli": "^7.7.2",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@wdio/local-runner": "^7.7.2",
+    "@wdio/mocha-framework": "^7.7.2",
+    "@wdio/spec-reporter": "^7.7.0",
+    "chromedriver": "^91.0.0",
+    "eslint": "^7.27.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4",
+    "nodemon": "^2.0.7",
+    "npm-run-all": "^4.1.5",
+    "parcel-bundler": "^1.12.5",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.2",
+    "wdio-chromedriver-service": "^7.1.0"
+  }
+}
